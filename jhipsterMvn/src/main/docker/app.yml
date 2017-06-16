@@ -1,0 +1,16 @@
+version: '2'
+services:
+    testjhipstermvn-app:
+        image: testjhipstermvn
+        external_links:
+            - testjhipstermvn-postgresql:postgresql
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql:5432/testjhipsterMvn
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+        ports:
+            - 8080:8080
+    testjhipstermvn-postgresql:
+        extends:
+            file: postgresql.yml
+            service: testjhipstermvn-postgresql

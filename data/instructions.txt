@@ -1,0 +1,5 @@
+Please record all database operations
+
+Folder procedure: Record all the operation of the stored procedure
+Folder function: Record all the operation of the function
+Folder table: Record all the operation of the table, including modify the table, data change, and so on 
